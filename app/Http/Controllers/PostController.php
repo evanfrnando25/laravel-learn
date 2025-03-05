@@ -17,11 +17,12 @@ class PostController extends Controller
         ]);
     }
 
-    public function show($slug)
+    //ini fitur dari laravel tanpa menggunakan find , kita dapat params post nya
+    public function show(Post $post)
     {
         return view('post', [
             "title" => "single post",
-            "post" => Post::find($slug)
+            "post" => $post
         ]);
     }
 }

@@ -34,7 +34,8 @@ Route::get('/about', function () {
 
 
 Route::get('/posts', [PostController::class, 'index' ]);
-Route::get('/posts/{slug}', [PostController::class, 'show' ]);
+//ini post::slug untuk query slug nya
+Route::get('/posts/{post:slug}', [PostController::class, 'show' ]);
 
 
 // //ini manual contoh
