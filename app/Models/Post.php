@@ -15,4 +15,10 @@ class Post extends Model
     //ini guarded field apa saja yang gaboleh diisi
     protected $guarded = ['id'];
 
+    //ini kita membuat relation ke category 1 post belongs to category table
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
 }

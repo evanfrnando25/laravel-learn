@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->id();
+            //membuat hubungan dengan table category id
+            $table->foreignId('category_id');
             //ini kita menambahkan field title dengan type string
             $table->string('title');
             //ini kita menambahkan field slug dengan type string
